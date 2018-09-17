@@ -5,8 +5,8 @@ using UnityEngine;
 [ExecuteInEditMode]
 [SelectionBase]
 
-public class CubeEditor : MonoBehaviour {
-    [SerializeField][Range(1f,20f)] float gridSize = 10f;
+public class Waypoint : MonoBehaviour {
+    [SerializeField][Range(1f,20f)] float gridSize = 1f;
 
     TextMesh textMesh;
 
