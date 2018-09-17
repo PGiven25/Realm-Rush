@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
-    [SerializeField] List<Block> path;
+    [SerializeField] List<Waypoint> path;
     
    
 	// Use this for initialization
@@ -15,7 +15,7 @@ public class EnemyMovement : MonoBehaviour {
     IEnumerator FollowPath()
     {
         print("Starting Patrol");
-        foreach (Block waypoint in path)
+        foreach (Waypoint waypoint in path)
         {            
             transform.position = waypoint.transform.position;
             print("Visiting block" + waypoint);

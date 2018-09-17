@@ -2,33 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
-[SelectionBase]
-
 public class Waypoint : MonoBehaviour {
-    [SerializeField][Range(1f,20f)] float gridSize = 1f;
 
-    TextMesh textMesh;
+    const int gridSize = 1;
+    Vector2Int gridPos;
 
-    private void Start()
+    public int GetGridSize()
     {
-     
+        return gridSize;
     }
 
-    void Update()
+    public Vector2 GetGridPos()
     {
-        Vector3 snapPos;
-        
-        snapPos.x = Mathf.RoundToInt(transform.position.x/gridSize) * gridSize;
-        snapPos.z = Mathf.RoundToInt(transform.position.z / gridSize) * gridSize;
-        transform.position = new Vector3(snapPos.x, 0f, snapPos.z);
-
-
-        textMesh = GetComponentInChildren<TextMesh>();
-        string LabelText = snapPos.x / gridSize + "," + snapPos.z / gridSize;
-        textMesh.text = LabelText;
-        gameObject.name = LabelText;
-
-
+        return new Vector2Int(Mathf.RoundToInt(transform.position.x / gridSize) * gridSize,
+                              Mathf.RoundToInt(transform.position.z / gridSize * gridSize));
     }
+
+    // Use this for initialization
+    void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
 }
