@@ -21,12 +21,13 @@ public class CubeEditor : MonoBehaviour {
         
         snapPos.x = Mathf.RoundToInt(transform.position.x/gridSize) * gridSize;
         snapPos.z = Mathf.RoundToInt(transform.position.z / gridSize) * gridSize;
+        transform.position = new Vector3(snapPos.x, 0f, snapPos.z);
 
 
         textMesh = GetComponentInChildren<TextMesh>();
-        textMesh.text = snapPos.x / gridSize + "," + snapPos.z/gridSize;
-
-        transform.position = new Vector3(snapPos.x, 0f, snapPos.z);
+        string LabelText = snapPos.x / gridSize + "," + snapPos.z / gridSize;
+        textMesh.text = LabelText;
+        gameObject.name = LabelText;
 
 
     }
