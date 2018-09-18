@@ -1159,8 +1159,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e5f372551ae0249842a5cf0af54d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startWaypoint: {fileID: 2085041177}
+  startWaypoint: {fileID: 1831373149}
   endWaypoint: {fileID: 547851130}
+--- !u!114 &1831373149 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114059053254542932, guid: 0b2621f20f199b546bbb8953c2b60d4c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1836792107}
+  m_Script: {fileID: 11500000, guid: 9bd24424cc11e0849b7c21e15b4069e2, type: 3}
 --- !u!1001 &1836792107
 Prefab:
   m_ObjectHideFlags: 0
@@ -1268,9 +1274,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4911989449874916, guid: 0b2621f20f199b546bbb8953c2b60d4c,
     type: 2}
   m_PrefabInternal: {fileID: 2085041175}
---- !u!114 &2085041177 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114059053254542932, guid: 0b2621f20f199b546bbb8953c2b60d4c,
-    type: 2}
-  m_PrefabInternal: {fileID: 2085041175}
-  m_Script: {fileID: 11500000, guid: 9bd24424cc11e0849b7c21e15b4069e2, type: 3}

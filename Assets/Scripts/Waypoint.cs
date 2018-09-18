@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour {
 
+    public bool isExplored = false;
     const int gridSize = 1;
     Vector2Int gridPos;
+
 
     public int GetGridSize()
     {
@@ -26,14 +28,9 @@ public class Waypoint : MonoBehaviour {
                               Mathf.RoundToInt(transform.position.z / gridSize));
     }
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+
+
+
 
 }
