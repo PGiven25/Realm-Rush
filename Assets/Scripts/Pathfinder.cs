@@ -8,8 +8,18 @@ public class Pathfinder : MonoBehaviour {
     Dictionary<Vector2Int, Waypoint> grid = new Dictionary<Vector2Int, Waypoint>();
     Queue<Waypoint> queue = new Queue<Waypoint>();
     Waypoint searchCenter;
+    List<Waypoint> path = new List<Waypoint>();
 
     bool isRunning = true;
+
+    public List<Waypoint> GetPath()
+    {
+        LoadBlocks();
+        ColorStartAndEnd();
+        BreadthFirstSearch();
+        CreatePath();
+        return path;
+    }
 
     Vector2Int[] directions =
     {
@@ -19,14 +29,35 @@ public class Pathfinder : MonoBehaviour {
         Vector2Int.left
     };
 
-	// Use this for initialization
-	void Start ()
+    private void CreatePath()
     {
-        LoadBlocks();
-        ColorStartAndEnd();
-       // ExploreNeighbours();
-        Pathfind();
+        path.Add(endWaypoint);
+
+        Waypoint previous = endWaypoint.exploredFrom;
+        while(previous != startWaypoint)
+        {
+            path.Add(previous);
+            previous = previous.exploredFrom;
+        }
+        path.Add(startWaypoint);
+        path.Reverse();
     }
+
+    private void BreadthFirstSearch()
+    {
+        queue.Enqueue(startWaypoint);
+
+        while (queue.Count > 0 && isRunning)
+        {
+            searchCenter = queue.Dequeue();
+            searchCenter.isExplored = true;
+            HaltIfEnd();
+            ExploreNeighbours();
+            searchCenter.isExplored = true;
+        }
+        print("done searching?");
+    }
+
 
     private void LoadBlocks()
     {
@@ -55,11 +86,10 @@ public class Pathfinder : MonoBehaviour {
         foreach(Vector2Int direction in directions)
         {
             Vector2Int explorationCoordinates = searchCenter.GetGridPos() + direction;
-            try
+            if(grid.ContainsKey(explorationCoordinates))
             {
                 QueueNewNeighbours(explorationCoordinates);
             }
-            catch { }
         }
     }
 
@@ -79,30 +109,11 @@ public class Pathfinder : MonoBehaviour {
         endWaypoint.SetTopColor(Color.red);
     }
 
-    private void Pathfind()
-    {
-        queue.Enqueue(startWaypoint);
-
-        while (queue.Count > 0 && isRunning)
-        {
-            searchCenter = queue.Dequeue();
-            searchCenter.isExplored = true;
-            HaltIfEnd();
-            ExploreNeighbours();
-            searchCenter.isExplored = true;  
-        }
-        print("done searching?");
-    }
-
     private void HaltIfEnd()
     {
         if (searchCenter == endWaypoint)
         {
-            print("Search stopped because current waypoint is the end point");//TODO remove log
             isRunning = false;            
         }
     }
-
-
-
 }
