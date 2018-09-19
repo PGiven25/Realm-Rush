@@ -15,7 +15,7 @@ public class Pathfinder : MonoBehaviour {
     public List<Waypoint> GetPath()
     {
         LoadBlocks();
-        ColorStartAndEnd();
+       // ColorStartAndEnd();
         BreadthFirstSearch();
         CreatePath();
         return path;
@@ -55,7 +55,7 @@ public class Pathfinder : MonoBehaviour {
             ExploreNeighbours();
             searchCenter.isExplored = true;
         }
-        print("done searching?");
+        //print("done searching?");
     }
 
 
@@ -103,11 +103,12 @@ public class Pathfinder : MonoBehaviour {
         } 
     }
 
+    /*
     private void ColorStartAndEnd()
     {
         startWaypoint.SetTopColor(Color.green);
         endWaypoint.SetTopColor(Color.red);
-    }
+    }*/
 
     private void HaltIfEnd()
     {
