@@ -1439,15 +1439,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4749951860867554, guid: 8738bf7047f360a4f9305cf10a9cb473, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.591563
+      value: 0.218
       objectReference: {fileID: 0}
     - target: {fileID: 4749951860867554, guid: 8738bf7047f360a4f9305cf10a9cb473, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.58680654
+      value: -0.077
       objectReference: {fileID: 0}
     - target: {fileID: 4749951860867554, guid: 8738bf7047f360a4f9305cf10a9cb473, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.3323755
+      value: 0.332
       objectReference: {fileID: 0}
     - target: {fileID: 4749951860867554, guid: 8738bf7047f360a4f9305cf10a9cb473, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3097,7 +3097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1650427774}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3110,7 +3110,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1650427773}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.639, y: 0.832, z: -0.335}
+  m_LocalPosition: {x: -0.239, y: 0.285, z: -0.335}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1116725502}

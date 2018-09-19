@@ -4,13 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Tower : MonoBehaviour {
+    //Params of each tower
     [SerializeField] Transform objectToPan;
-    [SerializeField] Transform targetEnemy;
     [SerializeField] float attackRange = 0.1f;
     [SerializeField] ParticleSystem projectileParticle;
 
+    //state of indiv towers
+    Transform targetEnemy;
 
     void Update() {
+        SetTargetEnemy();
         if (targetEnemy)
         {
             objectToPan.LookAt(targetEnemy);
@@ -21,6 +24,12 @@ public class Tower : MonoBehaviour {
             Shoot(false);
         }
     }
+
+    private void SetTargetEnemy()
+    {
+
+    }
+
 
     private void FireAtEnemy()
     {
