@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour {
 
     [Range(0.1f,120f)]
-    [SerializeField]float secondsBetweenSpawns = 4f;
+    [SerializeField]float secondsBetweenSpawns = 6f;
     [SerializeField] EnemyMovement enemyPrefab;
 
 	// Use this for initialization
