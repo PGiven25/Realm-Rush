@@ -3047,7 +3047,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1650427773}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.239, y: 0.285, z: -0.335}
+  m_LocalPosition: {x: -0.239, y: 0.818, z: -0.335}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1116725502}
@@ -3429,6 +3429,11 @@ Prefab:
     - target: {fileID: 1531433995746918, guid: 0b2621f20f199b546bbb8953c2b60d4c, type: 2}
       propertyPath: m_Name
       value: Cube(Quad) (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 65350284373018002, guid: 0b2621f20f199b546bbb8953c2b60d4c,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b2621f20f199b546bbb8953c2b60d4c, type: 2}

@@ -16,14 +16,11 @@ public class Waypoint : MonoBehaviour {
         return gridSize;
     }
 
-    /*
-    public void SetTopColor(Color color)
+
+    private void OnMouseOver()
     {
-        var startColor = transform.Find("Top").GetComponent<MeshRenderer>();
-        startColor.material.color = color;
-
-    }*/
-
+        print(gameObject.name);
+    }
 
     public Vector2Int GetGridPos()
     {
