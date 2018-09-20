@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionMesh: {fileID: 0}
-  hitPoint: 3
+  hitPoint: 20
   enemyIsHit: {fileID: 198608249807927468}
   enemyDead: {fileID: 198537984209914932, guid: 1a51bfda454239a41afb7dee687c6ac0,
     type: 2}
