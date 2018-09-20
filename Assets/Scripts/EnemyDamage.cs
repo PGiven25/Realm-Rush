@@ -6,6 +6,7 @@ public class EnemyDamage : MonoBehaviour {
     [SerializeField] Collider collisionMesh;
     [SerializeField] int hitPoint = 10;
     [SerializeField] ParticleSystem enemyIsHit;
+    [SerializeField] ParticleSystem enemyDead;
 
     private void OnParticleCollision(GameObject other)
     {
@@ -24,6 +25,8 @@ public class EnemyDamage : MonoBehaviour {
 
     private void KillEnemy()
     {
+        var explode = Instantiate(enemyDead, transform.position, Quaternion.identity);
+        explode.Play();
         Destroy(gameObject);
     }
 }
