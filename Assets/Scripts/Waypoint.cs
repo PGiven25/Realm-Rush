@@ -27,8 +27,7 @@ public class Waypoint : MonoBehaviour {
         {
             if (isPlaceable)
             {
-                Instantiate(towerPrefab, transform.position, Quaternion.identity);
-                isPlaceable = false;
+                FindObjectOfType<TowerFactory>().AddTower(this);
             }
             else
             {

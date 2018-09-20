@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour {   
+public class EnemyMovement : MonoBehaviour {
+
+    
    
 	// Use this for initialization
 	void Start ()

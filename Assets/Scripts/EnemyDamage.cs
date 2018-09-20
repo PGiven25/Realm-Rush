@@ -27,6 +27,9 @@ public class EnemyDamage : MonoBehaviour {
     {
         var explode = Instantiate(enemyDead, transform.position, Quaternion.identity);
         explode.Play();
+        float destroyDelay = explode.main.duration;
+
         Destroy(gameObject);
+        Destroy(explode.gameObject, destroyDelay);
     }
 }

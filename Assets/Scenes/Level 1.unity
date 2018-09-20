@@ -1283,8 +1283,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 593821164}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.56928, y: 36.84913, z: -2.4233634}
-  m_LocalScale: {x: 30, y: 30, z: 30}
+  m_LocalPosition: {x: 39.57, y: 36.84913, z: -0.42}
+  m_LocalScale: {x: 2.9197009, y: 2.9197009, z: 2.9197009}
   m_Children: []
   m_Father: {fileID: 1058135425}
   m_RootOrder: 0
@@ -2845,12 +2845,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1650427773}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.239, y: 0.818, z: -0.335}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1774002516}
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1650427775
 MonoBehaviour:
@@ -2866,6 +2866,7 @@ MonoBehaviour:
   secondsBetweenSpawns: 4.9
   enemyPrefab: {fileID: 114035570527924930, guid: ef15a98995dd43e4d83a322914428bfe,
     type: 2}
+  enemyParentTransform: {fileID: 1650427774}
 --- !u!1001 &1686407831
 Prefab:
   m_ObjectHideFlags: 0
@@ -3105,6 +3106,7 @@ GameObject:
   - component: {fileID: 1774002517}
   - component: {fileID: 1774002519}
   - component: {fileID: 1774002518}
+  - component: {fileID: 1774002520}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -3143,6 +3145,8 @@ Transform:
   - {fileID: 638218390}
   - {fileID: 917975031}
   - {fileID: 816914379}
+  - {fileID: 2136060902}
+  - {fileID: 1650427774}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3185,6 +3189,21 @@ MonoBehaviour:
   exploredFrom: {fileID: 0}
   isPlaceable: 1
   towerPrefab: {fileID: 0}
+--- !u!114 &1774002520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1774002515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b56c4d8529982174189cca8568211d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 114387956862548646, guid: 6d90f50fb73edb1498f2c88a7bbe618c,
+    type: 2}
+  towerLimit: 3
+  towerParentTransform: {fileID: 2136060902}
 --- !u!1001 &1808755793
 Prefab:
   m_ObjectHideFlags: 0
@@ -3801,12 +3820,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2136060901}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.881733, y: -40.446, z: 36.065346}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1774002516}
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2136060903
 MonoBehaviour:
@@ -3824,3 +3843,4 @@ MonoBehaviour:
   attackRange: 2
   projectileParticle: {fileID: 198296793228911860, guid: 98d7c2b787b2f5a478232f9a8c81b8b0,
     type: 2}
+  baseWaypoint: {fileID: 0}
