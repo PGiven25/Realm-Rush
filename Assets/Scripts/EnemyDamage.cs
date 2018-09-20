@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour {
     [SerializeField] Collider collisionMesh;
     [SerializeField] int hitPoint = 10;
+    [SerializeField] ParticleSystem enemyIsHit;
 
     private void OnParticleCollision(GameObject other)
     {
@@ -18,6 +19,7 @@ public class EnemyDamage : MonoBehaviour {
     private void ProcessHit()
     {
         hitPoint = hitPoint - 1;
+        enemyIsHit.Play();
     }
 
     private void KillEnemy()
