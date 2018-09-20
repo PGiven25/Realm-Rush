@@ -3399,6 +3399,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isExplored: 0
   exploredFrom: {fileID: 0}
+  isPlaceable: 1
+  towerPrefab: {fileID: 0}
 --- !u!1001 &1808755793
 Prefab:
   m_ObjectHideFlags: 0
@@ -3442,6 +3444,12 @@ Prefab:
       propertyPath: m_Name
       value: Cube(Quad) (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114059053254542932, guid: 0b2621f20f199b546bbb8953c2b60d4c,
+        type: 2}
+      propertyPath: towerPrefab
+      value: 
+      objectReference: {fileID: 114387956862548646, guid: 6d90f50fb73edb1498f2c88a7bbe618c,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b2621f20f199b546bbb8953c2b60d4c, type: 2}
   m_IsPrefabAsset: 0
