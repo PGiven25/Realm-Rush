@@ -110,3 +110,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHP: 10
   healthDecrease: 1
+  healthText: {fileID: 0}

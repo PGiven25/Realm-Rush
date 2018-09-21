@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemyDamage : MonoBehaviour {
     [SerializeField] Collider collisionMesh;
     [SerializeField] int hitPoint = 10;
@@ -25,6 +26,7 @@ public class EnemyDamage : MonoBehaviour {
 
     private void KillEnemy()
     {
+       
         var explode = Instantiate(enemyDead, transform.position, Quaternion.identity);
         explode.Play();
         float destroyDelay = explode.main.duration;
