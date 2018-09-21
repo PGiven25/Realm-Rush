@@ -13,6 +13,7 @@ public class EnemyDamage : MonoBehaviour {
 
     AudioSource myAudioSource;
 
+
     private void Start()
     {
         myAudioSource = GetComponent<AudioSource>();
@@ -40,7 +41,7 @@ public class EnemyDamage : MonoBehaviour {
         var explode = Instantiate(enemyDead, transform.position, Quaternion.identity);
         explode.Play();
         Destroy(explode.gameObject, explode.main.duration);
-        AudioSource.PlayClipAtPoint(enemyDeathSFX, transform.position);
+        AudioSource.PlayClipAtPoint(enemyDeathSFX, Camera.main.transform.position);
         
         Destroy(gameObject);
     }
