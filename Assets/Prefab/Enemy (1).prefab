@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f66d010932a0271448f7b3e809b915f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementPeriod: 1
+  movementPeriod: 0.5
   goalParticle: {fileID: 198537984209914932, guid: 1a51bfda454239a41afb7dee687c6ac0,
     type: 2}
 --- !u!114 &114037709292729906
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionMesh: {fileID: 0}
-  hitPoint: 5
+  hitPoint: 10
   enemyIsHit: {fileID: 198608249807927468}
   enemyDead: {fileID: 198537984209914932, guid: 1a51bfda454239a41afb7dee687c6ac0,
     type: 2}

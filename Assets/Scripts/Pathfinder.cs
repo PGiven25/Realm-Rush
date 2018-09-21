@@ -88,6 +88,7 @@ public class Pathfinder : MonoBehaviour {
             else
             {
                 grid.Add(waypoint.GetGridPos(), waypoint);
+               
             }
          }
     }    
