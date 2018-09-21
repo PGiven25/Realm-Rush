@@ -8,6 +8,15 @@ public class EnemyDamage : MonoBehaviour {
     [SerializeField] int hitPoint = 10;
     [SerializeField] ParticleSystem enemyIsHit;
     [SerializeField] ParticleSystem enemyDead;
+    [SerializeField] AudioClip enemyHitSFX;
+    [SerializeField] AudioClip enemyDeathSFX;
+
+    AudioSource myAudioSource;
+
+    private void Start()
+    {
+        myAudioSource = GetComponent<AudioSource>();
+    }
 
     private void OnParticleCollision(GameObject other)
     {
@@ -22,6 +31,7 @@ public class EnemyDamage : MonoBehaviour {
     {
         hitPoint = hitPoint - 1;
         enemyIsHit.Play();
+        myAudioSource.PlayOneShot(enemyHitSFX);
     }
 
     private void KillEnemy()
@@ -29,9 +39,9 @@ public class EnemyDamage : MonoBehaviour {
        
         var explode = Instantiate(enemyDead, transform.position, Quaternion.identity);
         explode.Play();
-        float destroyDelay = explode.main.duration;
-
+        Destroy(explode.gameObject, explode.main.duration);
+        AudioSource.PlayClipAtPoint(enemyDeathSFX, transform.position);
+        
         Destroy(gameObject);
-        Destroy(explode.gameObject, destroyDelay);
     }
 }
